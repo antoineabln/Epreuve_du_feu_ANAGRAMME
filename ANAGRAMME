@@ -1,0 +1,31 @@
+
+let mot1 = "arbre";
+
+let mot = ["amour", "arbre", "balade", "barre", "beau"];
+
+
+function anagramme(mot1, mot){
+  
+     let tab = [];
+ 
+ for(let i = 0; i < mot.length; i++){
+  
+  let S1 = mot1.split("").sort().join("");
+  let S2 = mot[i].split("").sort().join(""); 
+  
+  if(S1 === S2){
+    
+    tab.push(mot[i]);
+    
+     
+   }
+  
+ }
+  
+  return tab;
+  
+}
+  
+
+
+console.log(anagramme(mot1, mot)); 
